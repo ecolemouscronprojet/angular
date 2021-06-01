@@ -1,0 +1,17 @@
+
+<div id="container">
+    <input type="text" placeholder="chose à faire" #todo >
+    <button (click)="add()" >Envoyer</button>
+</div>
+
+<br>
+
+<ul>
+    <li *ngFor="let t of todoList">
+        <input type="checkbox" (click)="lineTrough(t)">
+        <span [ngClass]="{'line-trough': t.checked }" >{{t.value}}</span>
+    </li>
+</ul>
+
+<button [ngClass]="{'blue': couleur }" 
+(click)="changeColor()">Couleur</button>
